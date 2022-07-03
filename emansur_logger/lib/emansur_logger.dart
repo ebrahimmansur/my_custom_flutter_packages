@@ -1,3 +1,3 @@
 library emansur_logger;
 
-String printMessage({required String message}) => "🎉$message🎉";
+String decorateMessage({required String message}) => "🎉$message🎉";
