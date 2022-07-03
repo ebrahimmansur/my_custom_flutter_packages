@@ -6,7 +6,7 @@ void main() {
   test('should return message [🎉{message}🎉]', () {
     const input = 'hello';
     const matcher = '🎉hello🎉';
-    final message = printMessage(message: input);
+    final message = decorateMessage(message: input);
     expect(message, matcher);
   });
 }
