@@ -3,10 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:emansur_logger/emansur_logger.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
+  test('should return message [🎉{message}🎉]', () {
+    const input = 'hello';
+    const matcher = '🎉hello🎉';
+    final message = printMessage(message: input);
+    expect(message, matcher);
   });
 }
