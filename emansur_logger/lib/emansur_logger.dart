@@ -1,3 +1,3 @@
 library emansur_logger;
 
-String decorateMessage({required String message}) => "🎉$message🎉";
+export 'src/logger_src.dart';
