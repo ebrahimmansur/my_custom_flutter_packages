@@ -1,7 +1,3 @@
 library emansur_logger;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+String printMessage({required String message}) => "🎉$message🎉";
