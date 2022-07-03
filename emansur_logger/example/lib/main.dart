@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:emansur_logger/emansur_logger.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,17 +49,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  final int _counter = 0;
+  String message = '';
 
   void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
+    EMansuerLogger.i(message: "This is a Error");
   }
 
   @override
@@ -95,8 +90,8 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              message,
             ),
             Text(
               '$_counter',
